@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's - Меню</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>McDonald's</h1>
+            </div>
+            <nav>
+                <a href="#menu">Меню</a>
+                <a href="#" id="cart-btn">
+                    🛒 Кошик (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головний банер -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Смачна їжа для вас!</h2>
+            <p>Обирайте улюблені страви з нашого меню</p>
+        </div>
+    </section>
+
+    <!-- Навігація по категоріях -->
+    <nav class="category-nav">
+        <div class="container">
+            <div id="category-links" class="category-links">
+                <!-- Тут будуть посилання на категорії -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Меню -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Наше Меню</h2>
+            <div id="menu-items">
+                <!-- Тут будуть відображатися категорії та страви -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальне вікно з деталями страви -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p class="modal-calories">Калорії: <span id="modal-calories"></span></p>
+            <p class="modal-price">Ціна: <span id="modal-price"></span> грн</p>
+            
+            <!-- Лічильник кількості -->
+            <div class="quantity-selector">
+                <button id="decrease-btn" class="quantity-btn">−</button>
+                <span id="quantity-display" class="quantity-display">1</span>
+                <button id="increase-btn" class="quantity-btn">+</button>
+            </div>
+            
+            <button id="add-to-cart-btn" class="add-btn">Додати в кошик</button>
+        </div>
+    </div>
+
+    <!-- Модальне вікно кошика -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Ваш кошик</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Загальна сума: <span id="total-price">0</span> грн</h3>
+            </div>
+            <button class="order-btn">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
